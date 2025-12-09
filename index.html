@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WJP Heavy Machine Maintenance Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="logo">
+      <h1>WJP</h1>
+    </div>
+
+    <div class="title">
+      <h2>WJP Heavy Machine Maintenance Hub</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="services.html" class="btn-request">Request a Service</a>
+
+  </header>
+    
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Reliable. Fast. Professional.</h2>
+      <p>We keep your heavy machines running at peak performance with expert maintenance and repair services.</p>
+      <a href="contact.html" class="btn-cta">Get a Free Quote</a>
+
+    </div>
+  </section>
+
+  <!-- FOUR BOX SERVICES SECTION -->
+  <section class="services-boxes">
+    <div class="container">
+      <div class="service-box">
+        <img src="images/service1.jpg.jpg" alt="Machine Maintenance">
+        <h3>Machine Maintenance</h3>
+        <p>Expert repair and regular maintenance to keep your machines running efficiently.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/service2.jpg.jpg" alt="Emergency Repairs">
+        <h3>Emergency Repairs</h3>
+        <p>Fast response for urgent machine breakdowns to minimize downtime.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/service3.jpg.jpg" alt="Spare Parts Supply">
+        <h3>Spare Parts Supply</h3>
+        <p>We provide genuine spare parts to keep your machines in top condition.</p>
+      </div>
+      <div class="service-box">
+        <img src="images/service4.jpg.jpg" alt="Consultancy">
+        <h3>Consultancy</h3>
+        <p>Professional advice to optimize your heavy machinery operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCROLL ANIMATION SCRIPT -->
+  <script>
+    const boxes = document.querySelectorAll('.service-box');
+
+    function checkBoxes() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if(boxTop < triggerBottom) {
+          box.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkBoxes);
+    window.addEventListener('load', checkBoxes);
+  </script>
+
+</body>
+</html>
