@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | WJP Heavy Machine Maintenance Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER SECTION -->
+  <header>
+    <div class="logo">
+      <h1>WJP</h1>
+    </div>
+
+    <div class="title">
+      <h2>WJP Heavy Machine Maintenance Hub</h2>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a href="contact.html" class="btn-request">Request a Service</a>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="overlay"></div>
+
+    <div class="contact-content">
+      <h2>Contact Us</h2>
+      <p>Fill out the form below to request a service or get a free quote. Our team will reach out shortly.</p>
+
+      <div class="contact-container">
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+          <label for="service">Service Needed:</label>
+          <input type="text" id="service" name="service" placeholder="E.g. Excavator engine repair" required>
+
+          <label for="message">Message / Description:</label>
+          <textarea id="message" name="message" rows="5" placeholder="Describe your issue or service request..." required></textarea>
+
+          <button type="submit" class="btn-submit">Send Request</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Or Reach Us Directly</h3>
+          <p><strong>Phone:</strong> +233 59 594 8875 OR 02025720020</p>
+          <p class="note">Please note: Calls may not always be answered immediately, so filling the form ensures a quicker response.</p>
+          <p><strong>Email:</strong> info@wjpmaintenancehub.com</p>
+          <p><strong>Address:</strong> Kumasi, Ghana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPUP SCRIPT -->
+  <script>
+    const contactForm = document.querySelector('.contact-form');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent actual submission
+
+      // Show popup alert
+      alert('✅ Thank you! Your request has been received. We will contact you shortly.');
+
+      // Reset form fields
+      contactForm.reset();
+    });
+  </script>
+
+</body>
+</html>
